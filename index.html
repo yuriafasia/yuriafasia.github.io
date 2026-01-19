@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuri Afasia</title>
 
-  <!-- Icons -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -16,12 +15,7 @@
       --sub:#bfbfbf;
       --line:#333;
     }
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+    *{ box-sizing:border-box; margin:0; padding:0; }
 
     body{
       background:var(--bg);
@@ -47,7 +41,6 @@
       max-width:720px;
     }
 
-    /* HERO */
     .hero{
       min-height:100vh;
       display:flex;
@@ -66,7 +59,6 @@
       border:1px solid var(--line);
     }
 
-    /* Embed */
     iframe{
       width:100%;
       max-width:720px;
@@ -75,7 +67,6 @@
       margin-top:24px;
     }
 
-    /* Social */
     .social{
       display:flex;
       justify-content:center;
@@ -129,67 +120,16 @@
     </p>
   </section>
 
-  <!-- MUSIC -->
+  <!-- MUSIC (other labels / selected works) -->
   <section id="music">
     <h2>Music</h2>
-    <p>Selected works and releases.</p>
-
-    <iframe
-      src="https://bandcamp.com/EmbeddedPlayer/album=XXXXXXXX/size=large/bgcol=000000/linkcol=ffffff/transparent=true/"
-      loading="lazy">
-    </iframe>
+    <p>Selected works — including releases beyond this site.</p>
+    <!-- Add embeds/links here later (Spotify, Apple Music, etc.) -->
   </section>
 
-  <!-- VIDEO -->
-  <section id="video">
-    <h2>Video</h2>
-    <p>Visual works and performances.</p>
+  <!-- BANDCAMP -->
+  <section id="bandcamp">
+    <h2>Bandcamp</h2>
+    <p>Official releases on Bandcamp.</p>
 
-    <iframe
-      src="https://www.youtube.com/embed/9CQuINf9IKo"
-      loading="lazy"
-      allowfullscreen>
-    </iframe>
-  </section>
-
-  <!-- INFORMATION -->
-  <section id="info">
-    <h2>Information</h2>
-    <p>
-      Upcoming events, collaborations,
-      and announcements will appear here.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      For collaborations, licensing, or inquiries:<br>
-      <strong>yuriafasia7@gmail.com</strong>
-    </p>
-  </section>
-
-  <!-- SOCIAL -->
-  <div class="social">
-    <a href="https://www.facebook.com/YuriAfasia" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.instagram.com/yuriafasia_official" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.youtube.com/@officialyuriafasia588"
-       target="_blank"
-       aria-label="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </div>
-
-  <footer>
-    © Yuri Afasia
-  </footer>
-
-</body>
-</html>
+    <!-- Replace XXXXXXXX
