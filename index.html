@@ -1,11 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuri Afasia</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#0e0e0e;
+      --text:#f5f5f5;
+      --sub:#bfbfbf;
+      --line:#333;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      line-height:1.6;
+    }
+
+    section{
+      padding:64px 20px;
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    h1,h2{
+      font-weight:400;
+      letter-spacing:0.08em;
+      margin-bottom:24px;
+    }
+
+    p{
+      color:var(--sub);
+      max-width:720px;
+    }
+
+    /* Hero */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero img{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:24px;
+      border:1px solid var(--line);
+    }
+
+    /* Music / Video embeds */
+    iframe{
+      width:100%;
+      max-width:720px;
+      height:380px;
+      border:none;
+      margin-top:16px;
+    }
+
+    /* Social Icons */
+    .social{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin:48px 0;
+    }
+
+    .social a{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--text);
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .social a:hover{
+      background:var(--text);
+      color:var(--bg);
+    }
+
+    footer{
+      text-align:center;
+      padding:32px 0 48px;
+      color:var(--sub);
+      font-size:0.85rem;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Yuri Afasia</h1>
-  <p>Sound. Soul. Eternal circulation.</p>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- あとで写真を差し替え -->
+    <img src="your-photo.jpg" alt="Yuri Afasia">
+    <h1>YURI AFASIA</h1>
+    <p>Sound, presence, and resonance.</p>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <h2>Profile</h2>
+    <p>
+      Yuri Afasia is an artist working with sound, voice, and atmosphere.
+      Her work moves between music, memory, and stillness — not as genre,
+      but as presence.
+    </p>
+  </section>
+
+  <!-- MUSIC -->
+  <section id="music">
+    <h2>Music</h2>
+    <p>Selected works and releases.</p>
+
+    <!-- Bandcamp -->
+    <iframe src="https://bandcamp.com/EmbeddedPlayer/album=XXXXXXXX/size=large/bgcol=000000/linkcol=ffffff/transparent=true/" loading="lazy"></iframe>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video">
+    <h2>Video</h2>
+    <p>Visual works and performances.</p>
+
+    <!-- YouTube -->
+    <iframe src="https://www.youtube.com/embed/XXXXXXXX" loading="lazy"></iframe>
+  </section>
+
+  <!-- INFORMATION -->
+  <section id="info">
+    <h2>Information</h2>
+    <p>
+      Upcoming events, collaborations, and ticket information will appear here
+      when available.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      For collaborations, licensing, or inquiries:<br>
+      <strong>your@email.address</strong>
+    </p>
+  </section>
+
+  <!-- SOCIAL ICONS -->
+  <div class="social">
+    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@yourchannel" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  <footer>
+    © Yuri Afasia
+  </footer>
+
 </body>
 </html>
