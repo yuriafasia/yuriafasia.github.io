@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuri Afasia</title>
 
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     :root{
@@ -14,7 +14,9 @@
       --text:#f5f5f5;
       --sub:#bfbfbf;
       --line:#333;
+      --panel:#141414;
     }
+
     *{ box-sizing:border-box; margin:0; padding:0; }
 
     body{
@@ -22,6 +24,41 @@
       color:var(--text);
       font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       line-height:1.7;
+    }
+
+    /* Top nav */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(14,14,14,0.88);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      max-width:900px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+    .nav a{
+      color:var(--sub);
+      text-decoration:none;
+      font-size:0.95rem;
+      letter-spacing:0.06em;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      transition:0.25s;
+    }
+    .nav a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,0.04);
     }
 
     section{
@@ -33,7 +70,7 @@
     h1,h2{
       font-weight:400;
       letter-spacing:0.08em;
-      margin-bottom:24px;
+      margin-bottom:18px;
     }
 
     p{
@@ -41,13 +78,15 @@
       max-width:720px;
     }
 
+    /* HERO */
     .hero{
-      min-height:100vh;
+      min-height:92vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
+      padding-top:80px;
     }
 
     .hero img{
@@ -55,25 +94,71 @@
       height:200px;
       border-radius:50%;
       object-fit:cover;
-      margin-bottom:24px;
+      margin-bottom:22px;
       border:1px solid var(--line);
+      background:var(--panel);
     }
 
+    /* Cards / Buttons */
+    .cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      max-width:720px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      border-radius:14px;
+      padding:16px 16px;
+    }
+
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      color:var(--text);
+      transition:0.25s;
+      background:transparent;
+      font-size:0.95rem;
+      letter-spacing:0.04em;
+    }
+    .btn:hover{
+      background:var(--text);
+      color:var(--bg);
+    }
+
+    /* Embeds */
     iframe{
       width:100%;
       max-width:720px;
       height:400px;
       border:none;
-      margin-top:24px;
+      margin-top:22px;
+      border-radius:14px;
+      overflow:hidden;
     }
 
+    /* Social */
     .social{
       display:flex;
       justify-content:center;
       gap:18px;
-      margin:56px 0;
+      margin:56px 0 10px;
     }
-
     .social a{
       width:44px;
       height:44px;
@@ -84,9 +169,8 @@
       justify-content:center;
       color:var(--text);
       text-decoration:none;
-      transition:0.3s;
+      transition:0.25s;
     }
-
     .social a:hover{
       background:var(--text);
       color:var(--bg);
@@ -94,7 +178,7 @@
 
     footer{
       text-align:center;
-      padding:32px 0 48px;
+      padding:26px 0 48px;
       color:var(--sub);
       font-size:0.85rem;
     }
@@ -103,11 +187,34 @@
 
 <body>
 
+  <div class="nav">
+    <div class="nav-inner">
+      <a href="#profile">Profile</a>
+      <a href="#music">Music</a>
+      <a href="#bandcamp">Bandcamp</a>
+      <a href="#video">Video</a>
+      <a href="#info">Information</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
   <!-- HERO -->
   <section class="hero">
-    <img src="Yuriafasia_site.JPG" alt="Yuri Afasia">
+    <img src="Yuriafasia_site.JPG" alt="Yuri Afasia" />
     <h1>YURI AFASIA</h1>
     <p>Sound, presence, and resonance.</p>
+
+    <div class="social" aria-label="Social links">
+      <a href="https://www.facebook.com/YuriAfasia" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/yuriafasia_official" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@officialyuriafasia588" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
   </section>
 
   <!-- PROFILE -->
@@ -115,21 +222,71 @@
     <h2>Profile</h2>
     <p>
       Yuri Afasia works with voice, sound, and atmosphere.
-      Her creation flows between music and presence,
-      beyond fixed form, beyond category.
+      Creation moves as presence — clear, mysterious, alive.
     </p>
   </section>
 
-  <!-- MUSIC (other labels / selected works) -->
+  <!-- MUSIC (Other labels / all platforms) -->
   <section id="music">
     <h2>Music</h2>
     <p>Selected works — including releases beyond this site.</p>
-    <!-- Add embeds/links here later (Spotify, Apple Music, etc.) -->
+
+    <div class="cards">
+      <div class="card">
+        <p>Add links or embeds here anytime (Spotify / Apple Music / SoundCloud / etc.).</p>
+      </div>
+    </div>
   </section>
 
-  <!-- BANDCAMP -->
+  <!-- BANDCAMP (Separate section) -->
   <section id="bandcamp">
     <h2>Bandcamp</h2>
-    <p>Official releases on Bandcamp.</p>
+    <p>Official Bandcamp pages.</p>
 
-    <!-- Replace XXXXXXXX
+    <div class="cards">
+      <div class="card">
+        <div class="btns">
+          <a class="btn" href="https://yuriafasia.bandcamp.com" target="_blank" rel="noopener">
+            <i class="fa-solid fa-music"></i> Bandcamp Music
+          </a>
+          <a class="btn" href="https://yuriafasia.bandcamp.com/video" target="_blank" rel="noopener">
+            <i class="fa-solid fa-video"></i> Bandcamp Video
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO (YouTube embed on page) -->
+  <section id="video">
+    <h2>Video</h2>
+    <p>Visual works and performances.</p>
+
+    <iframe
+      src="https://www.youtube.com/embed/9CQuINf9IKo"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- INFORMATION -->
+  <section id="info">
+    <h2>Information</h2>
+    <p>
+      Upcoming events, collaborations, and announcements will appear here.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      For collaborations, licensing, or inquiries:<br />
+      <strong><a href="mailto:yuriafasia7@gmail.com" style="color:var(--text); text-decoration:none;">yuriafasia7@gmail.com</a></strong>
+    </p>
+  </section>
+
+  <footer>© Yuri Afasia</footer>
+
+</body>
+</html>
